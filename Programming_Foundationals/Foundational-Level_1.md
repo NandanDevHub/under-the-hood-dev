@@ -1,5 +1,5 @@
 
-# C# Programming – Foundational Level
+# C# Programming – Foundational Level 1
 
 This document is written for learners from a non-technical background who want to understand not only what programming concepts are, but **why they exist**, **how they work**, and **how they’re used in C#** with real-life analogies.
 
