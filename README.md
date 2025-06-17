@@ -13,6 +13,7 @@ This repository is my journey to master software fundamentals from scratch, expl
 ## 🗂 Structure
 
 - Programming Foundationals
+- Programming Basics
 
 
 ---
