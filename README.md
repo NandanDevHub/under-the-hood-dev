@@ -14,6 +14,7 @@ This repository is my journey to master software fundamentals from scratch, expl
 
 - Programming Foundationals
 - Programming Basics
+- HR QnA
 
 
 ---
