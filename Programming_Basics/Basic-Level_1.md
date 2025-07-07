@@ -1,4 +1,4 @@
-# C# Programming – Emerging Level 1
+# C# Programming – Basics Level 1
 
 ### ✅ 1. What happens when we compile a C# program?
 
@@ -522,9 +522,6 @@ This lets you call unmanaged Windows APIs from C#.
 Unmanaged code is like flying a plane manually — you have full control, but also full responsibility. If something goes wrong, there’s no safety net.
 
 ---
-# Phase 0.3 – Set 7: Garbage Collection in C# – How .NET Cleans Up Memory
-
----
 
 ### ✅ 13. What is garbage collection in C# and why is it important?
 
@@ -603,9 +600,6 @@ Think of it like a smart cleaning crew:
 - Checks rooms frequently that are used often (Gen 0)
 - Checks rooms occasionally that are still occupied (Gen 1, Gen 2)
 - Cleans only when necessary, without disturbing active users
-
----
-# Phase 0.3 – Set 8: Structs vs Classes – Understanding Lightweight Types
 
 ---
 
@@ -719,11 +713,7 @@ Use `class` when you want:
 
 ---
 
-# Phase 0.4 – Set 1: String Operations in C#
-
----
-
-### ✅ 1. What is a string in C# and how is it stored?
+### ✅ 17. What is a string in C# and how is it stored?
 
 **Answer:**  
 A `string` in C# is a **sequence of characters**, used to store and manipulate text (like names, sentences, inputs).
@@ -756,7 +746,7 @@ A string is like a sealed envelope — if you want to change what’s inside, yo
 
 ---
 
-### ✅ 2. What are common string methods and properties?
+### ✅ 18. What are common string methods and properties?
 
 **Answer:**  
 Here are some **common string operations** you’ll use often:
@@ -835,4 +825,317 @@ Think of strings as powerful Lego blocks of characters. These methods help you *
 
 ---
 
-Let me know when to move to **Set 2** of Phase 0.4, where we’ll cover `try-catch` blocks and handling unexpected errors at runtime.
+### ✅ 19. What is an exception in C# and why do we need `try-catch`?
+
+**Answer:**  
+An **exception** is an error that occurs **while your program is running** — not during compilation.  
+For example:
+- Dividing by zero
+- Accessing a file that doesn’t exist
+- Parsing invalid input like `int.Parse("abc")`
+
+If not handled, an exception will **crash your program**.
+
+---
+
+**To prevent this, we use:**
+- `try` → for the code that might fail
+- `catch` → to handle the failure gracefully
+- `finally` → (optional) to run cleanup code
+
+---
+
+**Example:**
+```csharp
+try
+{
+    int x = int.Parse("abc");  // This will throw FormatException
+}
+catch (FormatException)
+{
+    Console.WriteLine("Input was not a valid number.");
+}
+```
+
+---
+
+**Why use this?**
+- It lets your program recover from errors
+- It prevents crashes and improves user experience
+- You can log errors, retry operations, or give meaningful messages
+
+---
+
+**Analogy:**  
+It’s like trying to open a file. If the file isn’t there, you don’t die — you show a message and try another file.
+
+---
+
+### ✅ 20. What is the role of `finally`, and when is it useful?
+
+**Answer:**  
+The `finally` block contains code that runs **no matter what** — whether an exception was thrown or not.
+
+It’s used for **cleanup**, like:
+- Closing files
+- Releasing resources
+- Ending a database connection
+
+---
+
+**Example:**
+```csharp
+try
+{
+    Console.WriteLine("Trying risky code...");
+}
+catch (Exception)
+{
+    Console.WriteLine("Something went wrong.");
+}
+finally
+{
+    Console.WriteLine("This always runs.");
+}
+```
+
+---
+
+**Output:**
+```
+Trying risky code...
+This always runs.
+```
+
+Even if the `try` block fails or the `catch` is skipped, `finally` still runs.
+
+---
+
+**When not to use it?**
+- If you have no cleanup or post-processing logic
+- If it adds unnecessary complexity
+
+---
+
+**Analogy:**  
+`finally` is like locking your house every time — even if nothing bad happened, **you still do it as a habit** before leaving.
+
+---
+
+### ✅ 21. What is a `switch` statement and how is it different from `if-else`?
+
+**Answer:**  
+A `switch` statement is a cleaner and more readable way to write multiple `if-else` conditions based on the **same variable**.
+
+Use it when:
+- You’re comparing a variable to several known constant values
+- You want a simpler alternative to long `if-else-if` chains
+
+---
+
+**Basic syntax:**
+```csharp
+switch (day)
+{
+    case "Monday":
+        Console.WriteLine("Start of the week.");
+        break;
+    case "Friday":
+        Console.WriteLine("Almost weekend!");
+        break;
+    default:
+        Console.WriteLine("Just another day.");
+        break;
+}
+```
+
+---
+
+**Key rules:**
+- Each `case` must end with a `break;` (or `return`)
+- `default` is optional — it runs if no `case` matches
+- You cannot compare ranges (`>`, `<`) — only discrete values
+
+---
+
+**When not to use `switch`:**
+- When you need to compare multiple different variables
+- When your logic is more complex than a simple value match
+
+---
+
+**Analogy:**  
+A `switch` is like a vending machine:
+- You choose a code
+- The machine checks its internal list
+- It returns the exact item, or says “invalid choice”
+
+---
+
+### ✅ 22. Can `switch` be used with non-strings or numbers?
+
+**Answer:**  
+Yes. In C#, `switch` supports multiple types including:
+- `int`, `char`, `string`, `bool` (from C# 7), and `enum`
+
+---
+
+**Examples:**
+
+With `int`:
+```csharp
+int number = 2;
+switch (number)
+{
+    case 1:
+        Console.WriteLine("One");
+        break;
+    case 2:
+        Console.WriteLine("Two");
+        break;
+}
+```
+
+With `char`:
+```csharp
+char grade = 'B';
+switch (grade)
+{
+    case 'A':
+        Console.WriteLine("Excellent");
+        break;
+    case 'B':
+        Console.WriteLine("Good");
+        break;
+}
+```
+
+With `enum`:
+```csharp
+enum Status { Pending, Approved, Rejected }
+
+Status s = Status.Approved;
+switch (s)
+{
+    case Status.Pending:
+        Console.WriteLine("Wait...");
+        break;
+    case Status.Approved:
+        Console.WriteLine("Go ahead!");
+        break;
+}
+```
+
+---
+
+**Modern bonus (C# 8+):**
+You can use **switch expressions** and `when` filters — we’ll explore that in advanced C#.
+
+---
+
+### ✅ 23. What is a `List<T>` in C# and why is it better than an array?
+
+**Answer:**  
+A `List<T>` is a **generic, dynamic collection** that allows you to:
+- Add or remove elements at any time
+- Automatically resize itself
+- Store elements of any type (`T` stands for type)
+
+It’s part of `System.Collections.Generic` and is widely used in real-world development.
+
+---
+
+**How is it better than an array?**
+| Feature         | Array                      | List<T>                         |
+|------------------|----------------------------|----------------------------------|
+| Size             | Fixed after creation       | Grows/shrinks automatically     |
+| Adding/removing  | Manual with copying        | Built-in methods like `Add()`   |
+| Search/filter    | Manual                     | Easy with LINQ or methods       |
+| Flexibility      | Low                        | High                            |
+
+---
+
+**Basic example:**
+```csharp
+using System.Collections.Generic;
+
+List<string> fruits = new List<string>();
+fruits.Add("Apple");
+fruits.Add("Banana");
+
+Console.WriteLine(fruits[0]); // Output: Apple
+Console.WriteLine(fruits.Count); // Output: 2
+```
+
+---
+
+**Why use it in real apps?**
+- It simplifies storage and iteration
+- It supports advanced operations (searching, sorting, filtering)
+- It plays nicely with LINQ
+
+**Analogy:**  
+If an array is a fixed-size egg carton, a `List<T>` is a flexible shopping basket — you can keep adding/removing items as you need.
+
+---
+
+### ✅ 24. What are some useful methods available in `List<T>`?
+
+**Answer:**
+
+Here are some commonly used methods:
+
+---
+
+`Add()` – adds an item
+```csharp
+fruits.Add("Mango");
+```
+
+`Insert(index, value)` – adds item at a specific position
+```csharp
+fruits.Insert(1, "Pineapple");
+```
+
+`Remove(value)` – removes the first matching item
+```csharp
+fruits.Remove("Apple");
+```
+
+`RemoveAt(index)` – removes item at a given index
+```csharp
+fruits.RemoveAt(0);
+```
+
+`Contains(value)` – checks if item exists
+```csharp
+Console.WriteLine(fruits.Contains("Banana")); // true or false
+```
+
+`Clear()` – removes all items
+```csharp
+fruits.Clear();
+```
+
+`Count` – total number of items
+```csharp
+int total = fruits.Count;
+```
+
+---
+
+**Looping through a list:**
+```csharp
+foreach (string fruit in fruits)
+{
+    Console.WriteLine(fruit);
+}
+```
+
+---
+
+**Important:**  
+- Lists are **zero-indexed** like arrays
+- You can use `.Count` instead of `.Length`
+
+---
