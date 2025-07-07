@@ -1176,3 +1176,5 @@ foreach (string color in colors)
 `foreach` is like reading every book on a shelf one by one, in order — no need to count their positions, just focus on the content.
 
 ---
+
+ok
