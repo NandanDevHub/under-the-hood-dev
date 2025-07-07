@@ -12,8 +12,10 @@ This repository is my journey to master software fundamentals from scratch, expl
 
 ## 🗂 Structure
 
-TBD
-
+- Programming Foundationals
+- Programming Basics
+- HR QnA
+-
 
 ---
 
