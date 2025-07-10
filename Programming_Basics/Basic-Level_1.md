@@ -1,6 +1,6 @@
 # C# Programming – Basics Level 1
 
-### ✅ 1. What happens when we compile a C# program?
+### 1. What happens when we compile a C# program?
 
 **Answer:**  
 When you write a C# program and click "Build" or "Run", several things happen behind the scenes — more than just "running code".
@@ -55,7 +55,7 @@ When a chef (JIT) receives it, they translate just the steps they need, in their
 
 ---
 
-### ✅ 2. What is the CLR and why does C# depend on it?
+### 2. What is the CLR and why does C# depend on it?
 
 **Answer:**  
 The **Common Language Runtime (CLR)** is the **engine** that runs your C# code.
@@ -85,7 +85,7 @@ Think of it like a virtual machine (like JVM for Java) that handles all the toug
 The CLR is like the engine of a car — you write code (steer, accelerate), but the engine makes everything work safely, efficiently, and powerfully underneath.
 
 ---
-### ✅ 3. What is Intermediate Language (IL) and why is it used?
+### 3. What is Intermediate Language (IL) and why is it used?
 
 **Answer:**  
 **Intermediate Language (IL)** is the **low-level, platform-independent code** that your C# code gets compiled into before it's turned into actual machine code.
@@ -125,7 +125,7 @@ Each region (Windows, Linux, Mac) can read and interpret it using their local ac
 
 ---
 
-### ✅ 4. What is JIT compilation and how does it work in .NET?
+### 4. What is JIT compilation and how does it work in .NET?
 
 **Answer:**  
 **JIT (Just-In-Time)** compilation happens **at runtime**.  
@@ -164,7 +164,7 @@ Instead of translating the entire book up front, you only translate the current 
 
 ---
 
-### ✅ 5. What is the difference between Stack and Heap memory in C#?
+### 5. What is the difference between Stack and Heap memory in C#?
 
 **Answer:**  
 C# uses **two main memory regions** during execution:
@@ -208,7 +208,7 @@ In the above:
 
 ---
 
-### ✅ 6. What happens to variables when a method is called?
+### 6. What happens to variables when a method is called?
 
 **Answer:**  
 Each time a method is called:
@@ -260,7 +260,7 @@ But if you created a sticky note and left it on your monitor (heap), it stays un
 
 ---
 
-### ✅ 7. What is a value type and how does it behave in memory?
+### 7. What is a value type and how does it behave in memory?
 
 **Answer:**  
 A **value type** holds the **actual data directly**.  
@@ -300,7 +300,7 @@ A value type is like giving someone a **photocopy** of a document. They can writ
 
 ---
 
-### ✅ 8. What is a reference type and how is it different?
+### 8. What is a reference type and how is it different?
 
 **Answer:**  
 A **reference type** holds a **reference (memory address)** to the actual data stored in the **heap**.
@@ -351,7 +351,7 @@ A reference type is like sharing a **link to a shared document**. If anyone edit
 
 ---
 
-### ✅ 9. What is boxing in C# and when does it happen?
+### 9. What is boxing in C# and when does it happen?
 
 **Answer:**  
 **Boxing** is the process of **converting a value type into a reference type**, specifically into an `object`.
@@ -386,7 +386,7 @@ Boxing is like putting a **gift (value)** into a **box (object)** so it can be h
 
 ---
 
-### ✅ 10. What is unboxing and what are its risks?
+### 10. What is unboxing and what are its risks?
 
 **Answer:**  
 **Unboxing** is the process of **extracting a value type from an object**.
@@ -441,7 +441,7 @@ Use **generics** (like `List<int>`) instead of collections like `ArrayList`, whi
 
 ---
 
-### ✅ 11. What is managed code in C# and why is it safer?
+### 11. What is managed code in C# and why is it safer?
 
 **Answer:**  
 **Managed code** is code that runs under the **control of the CLR (Common Language Runtime)**.  
@@ -479,7 +479,7 @@ Managed code is like flying on autopilot — the system takes care of engine che
 
 ---
 
-### ✅ 12. What is unmanaged code and when do we use it?
+### 12. What is unmanaged code and when do we use it?
 
 **Answer:**  
 **Unmanaged code** is code that **runs outside the control of the CLR**, usually written in languages like C or C++.
@@ -523,7 +523,7 @@ Unmanaged code is like flying a plane manually — you have full control, but al
 
 ---
 
-### ✅ 13. What is garbage collection in C# and why is it important?
+### 13. What is garbage collection in C# and why is it important?
 
 **Answer:**  
 **Garbage Collection (GC)** is the automatic process of **finding and freeing memory** that your program no longer uses.
