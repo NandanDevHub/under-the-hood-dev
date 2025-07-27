@@ -24,6 +24,7 @@ I also consider **communication** a key strength. I’ve often helped bridge the
 
 Lastly, I am **consistent and disciplined** in my approach — whether it’s meeting deadlines, learning new skills, or supporting teammates, I stay dependable.
 
+
 ---
 
 ### 3. What is your biggest weakness?

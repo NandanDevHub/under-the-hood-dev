@@ -558,7 +558,7 @@ Garbage collection is like a janitor who walks around the building (heap), looki
 
 ---
 
-### ✅ 14. When does garbage collection run, and can we control it?
+### 14. When does garbage collection run, and can we control it?
 
 **Answer:**  
 The **GC decides on its own** when to run — based on:
@@ -603,7 +603,7 @@ Think of it like a smart cleaning crew:
 
 ---
 
-### ✅ 15. What is a `struct` in C# and how is it different from a `class`?
+### 15. What is a `struct` in C# and how is it different from a `class`?
 
 **Answer:**  
 A **`struct`** is a value type that you can use to create lightweight objects.  
@@ -666,7 +666,7 @@ A `class` is like giving them a link to a shared document. Changes in one affect
 
 ---
 
-### ✅ 16. When should we avoid using `struct`?
+### 16. When should we avoid using `struct`?
 
 **Answer:**  
 Avoid using `struct` when:
@@ -713,7 +713,7 @@ Use `class` when you want:
 
 ---
 
-### ✅ 17. What is a string in C# and how is it stored?
+### 17. What is a string in C# and how is it stored?
 
 **Answer:**  
 A `string` in C# is a **sequence of characters**, used to store and manipulate text (like names, sentences, inputs).
@@ -746,7 +746,7 @@ A string is like a sealed envelope — if you want to change what’s inside, yo
 
 ---
 
-### ✅ 18. What are common string methods and properties?
+### 18. What are common string methods and properties?
 
 **Answer:**  
 Here are some **common string operations** you’ll use often:
@@ -825,7 +825,7 @@ Think of strings as powerful Lego blocks of characters. These methods help you *
 
 ---
 
-### ✅ 19. What is an exception in C# and why do we need `try-catch`?
+### 19. What is an exception in C# and why do we need `try-catch`?
 
 **Answer:**  
 An **exception** is an error that occurs **while your program is running** — not during compilation.  
@@ -871,7 +871,7 @@ It’s like trying to open a file. If the file isn’t there, you don’t die �
 
 ---
 
-### ✅ 20. What is the role of `finally`, and when is it useful?
+### 20. What is the role of `finally`, and when is it useful?
 
 **Answer:**  
 The `finally` block contains code that runs **no matter what** — whether an exception was thrown or not.
@@ -922,7 +922,7 @@ Even if the `try` block fails or the `catch` is skipped, `finally` still runs.
 
 ---
 
-### ✅ 21. What is a `switch` statement and how is it different from `if-else`?
+### 21. What is a `switch` statement and how is it different from `if-else`?
 
 **Answer:**  
 A `switch` statement is a cleaner and more readable way to write multiple `if-else` conditions based on the **same variable**.
@@ -972,7 +972,7 @@ A `switch` is like a vending machine:
 
 ---
 
-### ✅ 22. Can `switch` be used with non-strings or numbers?
+### 22. Can `switch` be used with non-strings or numbers?
 
 **Answer:**  
 Yes. In C#, `switch` supports multiple types including:
@@ -1033,7 +1033,7 @@ You can use **switch expressions** and `when` filters — we’ll explore that i
 
 ---
 
-### ✅ 23. What is a `List<T>` in C# and why is it better than an array?
+### 23. What is a `List<T>` in C# and why is it better than an array?
 
 **Answer:**  
 A `List<T>` is a **generic, dynamic collection** that allows you to:
@@ -1079,7 +1079,7 @@ If an array is a fixed-size egg carton, a `List<T>` is a flexible shopping baske
 
 ---
 
-### ✅ 24. What are some useful methods available in `List<T>`?
+### 24. What are some useful methods available in `List<T>`?
 
 **Answer:**
 
